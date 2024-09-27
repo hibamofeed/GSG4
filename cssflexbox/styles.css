@@ -7,31 +7,30 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding: 20px;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    padding: 40px;
 }
 
 /* Header Section */
 .header {
-    background-color: #333;
-    height: 40px;
-    margin-bottom: 10px;
+    background-color: #636161;
+    height: 100px;
 }
 
 /* Navigation Section */
 .navigation {
     display: flex;
-    margin-bottom: 10px;
+}
+
+#n1 {
+    background-color: #636161;
 }
 
 .nav-item {
     background-color: #ccc;
-    width: 15%;
+    width: 10%;
     height: 40px;
     margin-right: 10px;
 }
@@ -49,28 +48,85 @@ body {
 
 .left-content {
     flex: 3;
-    background-color: #777;
-    height: 200px;
+    background-color: #636161;
+    height: 300px;
     margin-right: 10px;
 }
 
 .right-content {
     flex: 1;
     background-color: #ccc;
-    height: 200px;
+    height: 300px;
 }
 
 /* Grid Section */
 .grid-section {
+    display: grid;
+    flex:3;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.grid-item {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    padding: 10px;
+
+}
+
+
+/* Gray square */
+.square {
+    background-color: #ccc;
+    height: 150px; /* Increase height */
+    margin-bottom: 0; /* Remove margin to stick the gray bar right underneath */
+}
+
+/* Bar chart style under each square */
+.bar-chart {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20px; 
+}
+
+
+.bar:nth-child(1) {
+    width: 70%; 
+    height: 10px; /* Set a specific height for the bar */
+    background-color: #e4e2e2; 
+    margin-right: 10px; /* Space between the bars */
+}
+
+/* Second bar (30% width) */
+.bar:nth-child(2) {
+    width: 30%;
+    height: 10px; /* Set a specific height for the bar */
+    background-color: #e4e2e2; 
+}
+.b{
+    background-color: #e4e2e2; 
+    height: 15px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+
+}
+
+
+.grid{
+    display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-.grid-item {
-    background-color: #ddd;
-    width: 23%;
-    height: 100px;
-    margin-bottom: 10px;
+.grid-right{
+    flex: 1;
+    background-color: #a04d4d;
+    height: 300px;
 }
+
+
